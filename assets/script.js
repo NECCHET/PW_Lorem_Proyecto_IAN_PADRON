@@ -26,14 +26,10 @@ generateBtn.addEventListener('click', () => {
 
     // --- VALIDACIONES ---
     if (isNaN(amount) || amount <= 0) {
-        alert("Please enter a number greater than 0.");
+        alert("Por favor ingresa un numero diferente a 0.");
         return;
     }
 
-    if (!selectedType) {
-        alert("Please select paragraphs or words.");
-        return;
-    }
 
     // --- GENERACIÓN DEL TEXTO ---
     let result = "";
@@ -51,4 +47,32 @@ generateBtn.addEventListener('click', () => {
 
     // Mostrar el resultado en el textarea
     outputTextarea.value = result;
+});
+
+const copyBtn = document.getElementById('copy-btn');
+
+copyBtn.addEventListener('click', () => {
+    const textToCopy = outputTextarea.value;
+
+    // Solo copiamos si hay texto
+    if (textToCopy) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            // Guardamos el texto original del botón
+            const originalText = copyBtn.innerText;
+
+            // Cambiamos el mensaje visual (Requerimiento)
+            copyBtn.innerText = "¡Copiado!";
+            copyBtn.style.backgroundColor = "#d4edda"; // Un toque verde de éxito
+
+            // Volver al estado original después de 2 segundos
+            setTimeout(() => {
+                copyBtn.innerText = originalText;
+                copyBtn.style.backgroundColor = "#ffffff";
+            }, 2000);
+        }).catch(err => {
+            console.error('Error al copiar: ', err);
+        });
+    } else {
+        alert("Primero genera algún texto para copiar.");
+    }
 });

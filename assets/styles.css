@@ -113,3 +113,16 @@ footer {
     font-size: 0.9rem;
     color: #888;
 }
+
+.secondary-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    width: auto; /* Que no ocupe todo el ancho */
+    padding: 8px 15px;
+}
+
+.secondary-btn:hover {
+    background-color: #f9f9f9;
+}
