@@ -1,0 +1,115 @@
+/* 1. Estilos Generales y Tipografía */
+body {
+    font-family: Arial, sans-serif; /* Fuente limpia para el cuerpo */
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título con serifa y centrado (Requerimiento) */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-family: "Times New Roman", serif; /* Tipografía Serif */
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-style: italic;
+    color: #666;
+}
+
+/* 2. Layout de Dos Columnas (Requerimiento) */
+#info {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Espacio entre columnas */
+    max-width: 1000px;
+    margin: 0 auto 50px auto; /* Centra el contenedor y da espacio abajo */
+}
+
+#info article {
+    flex: 1; /* Hace que ambas columnas midan lo mismo */
+}
+
+/* 3. Estilos de la sección del Generador */
+#generator {
+    width: 100%; /* Cambia el max-width que teníamos por esto */
+    margin-top: 30px;
+}
+/* Responsive: Si la pantalla es pequeña, las columnas se apilan */
+@media (max-width: 768px) {
+    #info {
+        flex-direction: column;
+    }
+}
+/* 4. Estilización de Inputs, Botón y Área de Texto */
+
+/* El contenedor del formulario */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado limpio entre elementos */
+    margin-top: 20px;
+}
+
+/* El input numérico */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* El grupo de radios */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* El Botón (Requerimiento: Estilizar) */
+button {
+    background-color: #f0f0f0; /* Color neutro */
+    border: 1px solid #999;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    width: 100%; /* Para que ocupe el ancho del contenedor */
+}
+
+button:hover {
+    background-color: #e0e0e0; /* Efecto al pasar el mouse */
+}
+
+/* El Área de Texto (Requerimiento: Estilizar) */
+textarea {
+    width: 100%;
+    height: 200px; /* Tamaño generoso para el resultado */
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit; /* Que use la misma fuente del cuerpo */
+    resize: vertical; /* Solo permitir estirar hacia abajo */
+    background-color: #fafafa;
+}
+
+/* Footer centrado y discreto */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #888;
+}

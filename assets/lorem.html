@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Lorem Ipsum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lorem Ipsum</h1>
+        <p><em>"Neque porro quisquam est..."</em></p>
+    </header>
+
+    <main>
+    <section id="info">
+        <article>
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is a dummy text commonly used in design and web development...</p>
+            
+            <h2>Where does it come from?</h2>
+            <p>It is based on fragments of classical Latin literature...</p>
+        </article>
+
+        <article>
+            <h2>Why do we use it?</h2>
+            <p>Its letter distribution looks similar to real language...</p>
+
+            <section id="generator">
+                <h3>Where can I get some?</h3>
+                <div class="controls">
+                    <div class="input-group">
+                        <label for="amount">Paragraphs:</label>
+                        <input type="number" id="amount" value="5" min="1">
+                    </div>
+
+                    <div class="radio-group">
+                        <input type="radio" id="paragraphs" name="type" value="paragraphs" checked>
+                        <label for="paragraphs">paragraphs</label>
+                        <br>
+                        <input type="radio" id="words" name="type" value="words">
+                        <label for="words">words (approx.)</label>
+                    </div>
+
+                    <button id="generate-btn">Generate Lorem Ipsum</button>
+                </div>
+
+                <textarea id="output" readonly placeholder="Generated text will appear here..."></textarea>
+            </section>
+        </article>
+    </section>
+</main>
+
+    <footer>
+        <p>Taller de Programación Web - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
